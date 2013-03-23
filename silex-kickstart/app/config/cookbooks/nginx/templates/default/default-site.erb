@@ -1,0 +1,44 @@
+server {
+  listen   80;
+  server_name  <%= node['hostname'] %>;
+
+  access_log  <%= node['nginx']['log_dir'] %>/localhost.access.log;
+
+  location / {
+    root   /vagrant/web;
+    index index.php index.htm index.html;
+
+	# Skip .svn files        
+	location ~*\.svn {
+		return 404;
+		break;
+	}
+
+	# Skip .git files        
+	location ~*\.git {
+		return 404;
+		break;
+	}
+
+	# Dispatcher
+	location / {
+		try_files $uri $uri/ /index.php$uri?$args;
+	}
+
+	# Forward everything php related to php5-fpm
+	location ~ "^(.+\.php)($|/)" {
+
+		fastcgi_split_path_info ^(.+\.php)(.*)$;
+
+		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+		fastcgi_param SCRIPT_NAME $fastcgi_script_name;
+		fastcgi_param PATH_INFO $fastcgi_path_info;
+		fastcgi_pass  127.0.0.1:9000;
+
+		include fastcgi_params;
+
+		fastcgi_param SERVER_PORT 8080;
+
+	}
+  }
+}

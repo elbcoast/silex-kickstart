@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-0": { "": "app/src/" }
+    },
+    "require": {
+        "silex/silex": "1.0.*@dev",
+        "darklow/ff-silex-less-provider": "dev-master",
+        "twig/twig": ">=1.8,<2.0-dev",
+        "symfony/twig-bridge": "~2.1"
+    }
+}
