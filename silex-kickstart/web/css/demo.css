@@ -1,0 +1,82 @@
+header#top {
+	background-image: url('../images/cntbg.gif');
+}
+h1 {
+	font-family: Georgia;
+	font-size: 2em;
+	padding: 1em;
+	color: white;
+}
+	h1 a {
+		color: white;
+		text-decoration: none;
+	}
+h2 {
+	font-family: Georgia;
+	font-size: 1.5em;
+	padding: 5.25em 0;
+	color: #666;
+	background-color: #ccc;
+	text-align: center;
+}
+ul#boxes li {
+	font-family: Georgia;
+	font-size: 1.33em;
+	padding: 2.5em 0;
+	color: #999;
+	background-color: #e5e5e5;
+	text-align: center;
+}
+
+#menu {
+	background-color: black;
+	font-family: Georgia;
+	color: #ff0000;
+	
+	padding: 0.5em;
+}
+
+#menu ul li{
+	display: inline;
+	padding-right: 1em;
+}
+
+#menu .active {
+	text-decoration: underline;
+}
+
+#menu a:link, #menu a:visited {
+	color: white;
+	text-decoration: none;
+}
+
+#menu a:hover, #menu a:active {
+	color: #ff0000;
+	text-decoration: none;
+}
+
+#maincolumn {
+	background-color: #e0e0ff;
+}
+
+#maincolumn p {
+	padding: 1em;
+	font-family: Georgia;
+}
+
+#maincolumn h2 {
+	font-family: Georgia;
+	font-size: 1.5em;
+	font-style: italic;
+	padding: 1em 1em 0em 0.5em;
+	background-color: #e0e0ff;
+	text-align: left;
+	color: #000;
+}
+
+#footer {
+	font-family: Georgia;
+	color: #a0a0a0;
+	padding: 3em 0;
+	text-align:center;
+}

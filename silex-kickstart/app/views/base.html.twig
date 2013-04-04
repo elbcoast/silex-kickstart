@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Silex {% block title %}{% endblock %}</title>
+	
+	{% block metadata %}
+   	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	{% endblock %}
+	
+	{% block stylesheets %}
+    <link rel="stylesheet" href="/css/style.css" />
+	{% endblock %}
+	
+</head>
+<body>
+{% block body %}
+	<div class="center">
+		
+		<!-- Header -->
+		<header id="top">
+		{% block header %}
+			<h1>Silex kickstart application</h1>
+	    {% endblock %}
+		</header>
+		
+		<!-- Menu -->
+		<section id="menu">
+		{% block menu %}
+		    {%  include('menu.html.twig') %}    
+		{% endblock %}
+		</section>
+
+		<!-- Main Body -->	
+		<article id="maincolumn">
+		{% block main %}
+			<h2>Main</h2>
+	    {% endblock %}
+		</article>
+		<section id="sidebar">
+		{% block sidebar %}
+			<h2>Sidebar</h2>
+		{% endblock %}
+		</section>
+		
+		<section id="footer">&copy;2013 elbcoast.net</section>
+		
+	</div>
+{% endblock %}
+</body>

@@ -4,6 +4,7 @@
     },
     "require": {
         "silex/silex": "1.0.*@dev",
+        "leafo/lessphp": "0.3.*@dev",
         "darklow/ff-silex-less-provider": "dev-master",
         "twig/twig": ">=1.8,<2.0-dev",
         "symfony/twig-bridge": "~2.1"

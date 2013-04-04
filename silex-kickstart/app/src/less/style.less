@@ -1,0 +1,43 @@
+@import 'reset.css';
+@import 'demo.css';
+@import 'grid.less';
+
+@column-width: 80;
+@gutter-width: 0;
+@columns: 12;
+
+@total-width: @gridsystem-width;
+
+
+////////////
+// LAYOUT //
+////////////
+
+// center the contents
+div.center {
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+// header
+header#top {
+	.column(12);
+
+}
+
+#menu {
+	.column(12);
+}
+
+// main and sidebar
+#maincolumn {
+	.column(8);
+}
+#sidebar {
+	.column(4);
+}
+
+#footer {
+	.column(12);
+}

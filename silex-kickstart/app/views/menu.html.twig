@@ -1,0 +1,13 @@
+{% set entries = [
+    ['home', {}, 'Home'],
+    ['hello', {'name': 'silex-fan'}, 'Hello!'] 
+] %}
+<ul>
+{% for entry in entries %}
+    {% if app.request.get('_route') == entry.0 %}
+        <li class="active">{{ entry.2 }}</li>
+    {% else %}
+        <li><a href="{{ path(entry.0, entry.1) }}">{{ entry.2 }}</a></li>
+    {% endif %}
+{% endfor %}
+</ul>
